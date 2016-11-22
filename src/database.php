@@ -2,7 +2,7 @@
 
 namespace ahmetertem;
 
-class DB
+class database
 {
     public $PDO = null;
     //public $memorize_queries = false;
@@ -12,7 +12,7 @@ class DB
 
     public function __construct($dsn, $user = null, $password = null, $arguments = null)
     {
-        $this->PDO = new PDO($dsn, $user, $password, $arguments);
+        $this->PDO = new \PDO($dsn, $user, $password, $arguments);
     }
 
     public function query()
